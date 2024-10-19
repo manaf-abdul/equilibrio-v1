@@ -15,6 +15,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useRouter as useNextRouter } from "next/router";
 import Logo from "../assets/images/logo.png";
+// import { ThemeSwitch } from "./theme-switch";
 
 const NavLink = ({ href, isActive, fill, nonFill, ...props }: any) => {
   return <Link href={href}>{isActive(href) ? fill : nonFill}</Link>;
@@ -53,6 +54,7 @@ export const Navbar = () => {
 
   return (
     <NextNav
+      style={{background:"#e5e7eb"}}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
         item: [
@@ -101,10 +103,10 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         {/* <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <ThemeSwitch/>
         </NavbarItem> */}
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="primary" href="/projects" variant="flat">
             Projects
           </Button>
         </NavbarItem>

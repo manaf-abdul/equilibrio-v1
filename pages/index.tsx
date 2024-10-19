@@ -1,19 +1,23 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import { Image } from "@nextui-org/react";
+import Logo from "../assets/images/logo.png";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center pt-0">
           <div className="mx-auto max-w-xl text-center">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Image src={Logo.src} width={200} />
+            </div>
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Design Your Dreams
               <strong className="font-extrabold text-red-700 sm:block">
@@ -23,8 +27,8 @@ export default function IndexPage() {
             </h1>
 
             <p className="mt-4 sm:text-xl/relaxed">
-              Elevating Spaces, Designing Dreams , Crafting Legacies & Build
-              Future with Equilibrio
+              Elevating Spaces, Designing Dreams, Crafting Legacies & Building
+              Future.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

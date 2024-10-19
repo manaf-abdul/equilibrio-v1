@@ -7,8 +7,8 @@ import { data } from "@/projectsdata";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 // Define constants for consistent image height and width
-const IMAGE_HEIGHT = "h-[350px] sm:h-[450px]";
-const IMAGE_WIDTH = "w-full md:w-[300px] lg:w-[350px]";
+// const IMAGE_HEIGHT = "h-[350px] sm:h-[450px]";
+// const IMAGE_WIDTH = "w-full md:w-[300px] lg:w-[350px]";
 
 const Index = () => {
   return (

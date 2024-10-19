@@ -60,11 +60,15 @@ const Index = () => {
           height={"auto"}
           width={"auto"}
         />
-        <Typography variant="h2" textAlign={"left"}>
-          {project[0]?.name}
-        </Typography>
-        <Typography variant="h3">{project[0]?.description}</Typography>
-        <Typography variant="h4">{project[0]?.location}</Typography>
+        <Box sx={{ width: "100%" }} paddingX={5} border={2} borderRadius={5} paddingY={5} borderColor={"#e5e7eb"}>
+          <Box display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"space-between"}>
+            <Typography variant="h4" textAlign={"left"}>
+              {project[0]?.name}
+            </Typography>
+            <Typography variant="body1">{project[0]?.description}</Typography>
+          </Box>
+          <Typography variant="body2" color="grey">{project[0]?.location}</Typography>
+        </Box>
         <Grid2
           container
           spacing={4}
@@ -80,24 +84,16 @@ const Index = () => {
                   size={{ xs: 12, sm: 12, md: 4 }}
                   key={index}
                   component="a"
-                  onClick={()=>openLightbox(index)}
+                  onClick={() => openLightbox(index)}
                   className="group block cursor-pointer"
                 >
-                  {/* <Box
-                    display={"flex"}
-                    flexDirection={"column"}
-                    alignItems={"center"}
-                    justifyContent={"center"}
-                  > */}
-                    <Image
-                      
-                      src={elm.src}
-                      alt={"name"}
-                      // className={`${IMAGE_HEIGHT} ${IMAGE_WIDTH} object-cover`}
-                      height={"auto"}
-                      width={"auto"}
-                    />
-                  {/* </Box> */}
+                  <Image
+                    src={elm.src}
+                    alt={"name"}
+                    // className={`${IMAGE_HEIGHT} ${IMAGE_WIDTH} object-cover`}
+                    height={"auto"}
+                    width={"auto"}
+                  />
                 </Grid2>
               ))
             : ""}
