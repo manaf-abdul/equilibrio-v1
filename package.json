@@ -11,6 +11,7 @@
 	"dependencies": {
 		"@emotion/react": "^11.13.3",
 		"@emotion/styled": "^11.13.0",
+		"@mui/icons-material": "^6.1.4",
 		"@mui/material": "^6.1.4",
 		"@nextui-org/button": "2.0.38",
 		"@nextui-org/code": "2.0.33",
@@ -32,7 +33,7 @@
 		"next-themes": "^0.2.1",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
-    	"yet-another-react-lightbox": "^3.21.6"
+		"yet-another-react-lightbox": "^3.21.6"
 	},
 	"devDependencies": {
 		"@types/node": "20.5.7",

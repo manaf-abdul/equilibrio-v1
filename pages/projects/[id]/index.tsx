@@ -17,6 +17,7 @@ const index = () => {
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  
   const openLightbox = useCallback((event: number) => {
     setCurrentImage(event);
     setViewerIsOpen(true);
