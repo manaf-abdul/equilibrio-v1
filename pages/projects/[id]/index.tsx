@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 const Lightbox = dynamic(() => import("@/components/Lightbox"));
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const projectId = router.query.id;
   const project = data.filter((elm) => elm.id === Number(projectId));
@@ -50,4 +50,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
