@@ -56,8 +56,10 @@ const Index = () => {
                   </div>
                   <div>
                     <Box display={"flex"} alignItems={"center"}>
-                    <LocationOnIcon sx={{color:"grey",fontSize:"1rem",marginRight:1}}/>
-                    <p className="text-gray-500 mr-10">{project.location}</p>
+                      <LocationOnIcon
+                        sx={{ color: "grey", fontSize: "1rem", marginRight: 1 }}
+                      />
+                      <p className="text-gray-500 mr-10">{project.location}</p>
                     </Box>
                   </div>
                 </div>
