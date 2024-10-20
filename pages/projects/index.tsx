@@ -1,7 +1,7 @@
 import DefaultLayout from "@/layouts/default";
 import { Image } from "@nextui-org/react";
 import Grid from "@mui/material/Grid2";
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/material";
 import { data } from "@/projectsdata";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -9,8 +9,28 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 // Define constants for consistent image height and width
 // const IMAGE_HEIGHT = "h-[350px] sm:h-[450px]";
 // const IMAGE_WIDTH = "w-full md:w-[300px] lg:w-[350px]";
-
+const categoryList = [
+  "All",
+  "commercial",
+  "institutional",
+  "hospitality",
+  "residential",
+  "interiors",
+];
 const Index = () => {
+  const [category, setCategory] = useState("");
+  const [projects, setProjects] = useState(data);
+
+  const handleCategoryChange = (name: string) => {
+    if (name === "All") {
+      setProjects(data);
+    } else {
+      const filteredProducts = data.filter((elm) => elm.category === name);
+      setProjects(filteredProducts);
+    }
+    setCategory(name);
+  };
+  
   return (
     <DefaultLayout>
       <Grid
@@ -19,8 +39,47 @@ const Index = () => {
         alignItems={"center"}
         justifyContent={"space-evenly"}
       >
-        {data.map((project, index) =>
-          project.projectImages.length ? (
+        <div className="w-full flex flex-row justify-center items-center pt-4">
+          <div className="sm:hidden">
+            <label htmlFor="Tab" className="sr-only">
+              Tab
+            </label>
+
+            <select
+              id="Tab"
+              className="w-full rounded-md border-gray-200 capitalize"
+              value={category}
+              onChange={(e) => handleCategoryChange(e.target.value)}
+            >
+              {categoryList.map((elm) => (
+                <option value={elm} className="capitalize">
+                  {elm}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="hidden sm:block">
+            <nav className="flex" aria-label="Tabs">
+              {categoryList.map((elm) => (
+                <button
+                  onClick={(e) => handleCategoryChange(elm)}
+                  className={`shrink-0 rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 ${category === elm ? "font-bold  text-gray-600" : ""}`}
+                >
+                  {elm}
+                </button>
+              ))}
+              {/* <a
+                href="#"
+                className="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+              >
+                Settings
+              </a> */}
+            </nav>
+          </div>
+        </div>
+        {projects.map((project, index) =>
+          project.projectImages.length && project.projectImages[0].src ? (
             <Grid
               alignItems={"center"}
               justifyContent={"center"}

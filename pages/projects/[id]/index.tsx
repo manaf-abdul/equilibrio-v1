@@ -54,7 +54,7 @@ const Index = () => {
         gap={1}
       >
         <Image
-          src={project[0]?.projectImages[0].src}
+          src={project[0]?.projectImages[0].src ?? ""}
           alt={project[0]?.name}
           // className={`${IMAGE_HEIGHT} ${IMAGE_WIDTH} object-cover`}
           height={"auto"}
