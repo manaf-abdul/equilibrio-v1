@@ -14,7 +14,7 @@ import {
 } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import { useRouter as useNextRouter } from "next/router";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo_only.png";
 // import { ThemeSwitch } from "./theme-switch";
 
 const NavLink = ({ href, isActive, fill, nonFill, ...props }: any) => {
