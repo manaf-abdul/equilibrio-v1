@@ -30,7 +30,7 @@ const Index = () => {
     }
     setCategory(name);
   };
-  
+
   return (
     <DefaultLayout>
       <Grid
@@ -52,7 +52,7 @@ const Index = () => {
               onChange={(e) => handleCategoryChange(e.target.value)}
             >
               {categoryList.map((elm) => (
-                <option value={elm} className="capitalize">
+                <option value={elm} key={elm} className="capitalize">
                   {elm}
                 </option>
               ))}
@@ -63,6 +63,7 @@ const Index = () => {
             <nav className="flex" aria-label="Tabs">
               {categoryList.map((elm) => (
                 <button
+                  key={elm}
                   onClick={(e) => handleCategoryChange(elm)}
                   className={`shrink-0 rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 ${category === elm ? "font-bold  text-gray-600" : ""}`}
                 >
