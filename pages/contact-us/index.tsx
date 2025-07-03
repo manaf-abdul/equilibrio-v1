@@ -7,7 +7,7 @@ const ContactUs = () => {
         <tbody>
           <tr>
             <th style={{ padding: '10px' }}>
-              <FaBuilding />
+              {/* <FaBuilding /> */}
             </th>
             <td>
               <b>
