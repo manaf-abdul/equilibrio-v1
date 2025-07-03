@@ -74,7 +74,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px" }}>
-                  <FaPhoneVolume />
+                  {/* <FaPhoneVolume /> */}
                 </th>
                 <td>
                   <span id="C_number">
@@ -84,7 +84,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px" }}>
-                  <FaEnvelopeOpenText />
+                  {/* <FaEnvelopeOpenText /> */}
                 </th>
                 <td>
                   <span id="C_email">
@@ -96,7 +96,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px" }}>
-                  <FaLocationArrow />
+                  {/* <FaLocationArrow /> */}
                 </th>
                 <td>
                   <span id="C_address">
@@ -110,7 +110,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px", color: "#25D366" }}>
-                  <FaWhatsapp />
+                  {/* <FaWhatsapp /> */}
                 </th>
                 <td>
                   <span id="C_whatsapp">
@@ -120,7 +120,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px" }}>
-                  <FaFacebook />
+                  {/* <FaFacebook /> */}
                 </th>
                 <td>
                   <span id="C_facebook">
@@ -132,7 +132,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px", color: "#1DA1F2" }}>
-                  <FaTwitter />
+                  {/* <FaTwitter /> */}
                 </th>
                 <td>
                   <span id="C_twitter">
@@ -142,7 +142,7 @@ const Index = () => {
               </tr>
               <tr>
                 <th style={{ padding: "10px" }}>
-                  <FaYoutube />
+                  {/* <FaYoutube /> */}
                 </th>
                 <td>
                   <span id="C_youtube">
