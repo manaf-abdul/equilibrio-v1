@@ -1,0 +1,115 @@
+/* Custom lightbox styles to ensure proper viewport centering */
+.yarl__container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.yarl__slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+}
+
+.yarl__slide img {
+  max-width: calc(100vw - 40px) !important;
+  max-height: calc(100vh - 40px) !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: auto !important;
+}
+
+.yarl__toolbar {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 10000 !important;
+}
+
+.yarl__navigation_prev {
+  position: fixed !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10000 !important;
+}
+
+.yarl__navigation_next {
+  position: fixed !important;
+  right: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10000 !important;
+}
+
+/* Ensure the lightbox doesn't interfere with body scroll */
+body.yarl__body_lock {
+  overflow: hidden !important;
+}
+
+/* Fix for mobile devices */
+@media (max-width: 768px) {
+  .yarl__slide {
+    padding: 10px !important;
+  }
+  
+  .yarl__slide img {
+    max-width: calc(100vw - 20px) !important;
+    max-height: calc(100vh - 20px) !important;
+  }
+  
+  .yarl__navigation_prev {
+    left: 10px !important;
+  }
+  
+  .yarl__navigation_next {
+    right: 10px !important;
+  }
+  
+  .yarl__toolbar {
+    top: 10px !important;
+    right: 10px !important;
+  }
+}
+
+/* Additional navbar text visibility fixes */
+nav[data-navbar] a[data-nextui-link] {
+  text-decoration: none !important;
+}
+
+nav[data-navbar] .navbar-text-light {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+nav[data-navbar] .navbar-text-light:hover {
+  color: #dc2626 !important;
+  text-shadow: none !important;
+}
+
+nav[data-navbar] .navbar-text-dark {
+  color: #111827 !important;
+}
+
+nav[data-navbar] .navbar-text-dark:hover {
+  color: #dc2626 !important;
+}
+
+nav[data-navbar] .navbar-text-active {
+  color: #dc2626 !important;
+}
